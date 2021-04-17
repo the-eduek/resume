@@ -1,2 +1,4 @@
 # resume
- Zuri Team Resumé Task
+ Zuri Team Résumé Task
+
+https://the-eduek.github.io/resume
