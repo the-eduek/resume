@@ -1,0 +1,214 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 2rem 5%;
+    font-family: Calibri, 'Trebuchet MS', sans-serif;
+    color: #333;
+    font-size: 18px;
+    background-color: #fff;
+}
+
+.blue-heading {
+    font-weight: bold;
+    color: rgb(4, 98, 246);
+}
+
+a {
+    text-decoration: underline;
+    color: #0000EE;
+}
+
+small {
+    display: block;
+    line-height: 1rem;
+}
+
+.info__name {
+    border: 3px solid rgb(4, 98, 246);
+    padding: 0.5rem 0;
+    margin: 0 auto;
+    max-width: 500px;
+}
+
+.info__name h2 {
+    border-top: 1px solid rgb(4, 98, 246);
+    border-bottom: 1px solid rgba(4, 98, 246, 0.6);    
+    font-size: 1.6rem;
+    text-align: center;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 1rem 0;
+}
+
+.info__details {
+    padding: 1.5rem 0;
+}
+
+.profile {
+    padding-top: 0.5rem;
+}
+
+article {
+    padding: 0.5rem 0;
+}
+
+.education {
+    padding-top: 1.5rem;
+}
+
+.education__school, .work__experience, .projects__item {
+    padding-top: 0.5rem;
+    padding-bottom: 1rem;
+}
+
+.education__school h3, .work__experience h3, .projects__item h3 {
+    color: #000;
+}
+
+.work {
+    padding-top: 1rem;
+}
+
+.projects {
+    padding: 1rem 0;
+}
+
+.projects__item p {
+    color: #333;
+}
+
+.projects ul, .skills ul {
+    padding-left: 2rem;
+    color: rgb(4, 98, 246);
+}
+
+.skills {
+    padding-bottom: 3rem;
+}
+
+.skills ul span {
+    color: #333;
+}
+
+footer {
+    border-top: 1px solid #333;
+    padding-top: 1rem;
+}
+
+footer p {
+    color: #555;
+    font-size: 15px;
+}
+
+footer ul.social {
+    display: flex;
+    list-style: none;
+    width: fit-content;
+    margin-left: -0.5rem;
+}
+
+footer ul.social a {
+    color: rgb(4, 98, 246);
+    display: inline-block;
+    padding: 0.5rem;
+}
+
+footer ul.social a:hover {
+    color: rgba(4, 98, 246, 0.6);
+}
+
+@media screen and (min-width: 1024px) {
+    html {
+        background-color: #f0f0f0;
+    }
+
+    body {
+        padding: 3rem 4rem;
+        max-width: 1024px;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    h3.blue-heading {
+        padding-bottom: 0.5rem;
+    }
+
+    main {        
+        display: grid;
+        grid-gap: 2rem;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 
+            "info info"
+            "profile projects"
+            "education skills"
+            "work ."
+    } 
+
+    .info {
+        display: grid;
+        grid-area: info;
+        grid-template-areas: "name details";        
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 2rem;
+        align-items: center;
+    }
+
+    .info__name {
+        grid-area: name;
+        padding: 0.5rem 3.5rem;
+    }
+
+    .info__details {
+        grid-area: details;
+    }
+
+    .profile {
+        grid-area: profile;
+    }
+
+    .education {
+        grid-area: education;
+        margin-top: -9rem;
+    }
+
+    .projects {
+        grid-area: projects;
+    }
+
+    .work {
+        grid-area: work;
+    }
+
+    .skills {
+        grid-area: skills;
+    }   
+    
+    footer {
+        padding-top: 0.5rem;
+        border: none;
+        text-align: right;
+    }
+
+    footer ul.social {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        right: 1rem;
+        bottom: 6.5rem;
+    }
+    
+    footer ul.social::before {
+        content: "";
+        position: absolute;
+        width: 3px;
+        height: 3.55rem;
+        background-color: rgb(4, 98, 246);
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
